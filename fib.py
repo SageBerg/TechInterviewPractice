@@ -1,3 +1,5 @@
+memo = dict()
+
 def iter_fib(n):
     if n == 1 or n == 2:
         return 1
@@ -9,10 +11,13 @@ def iter_fib(n):
     return fibs[n - 1]
 
 def rec_fib(n):
+    if n in memo:
+        return memo[n]
     if n == 1 or n == 2:
         return 1
-    return rec_fib(n - 1) + rec_fib(n - 2)
+    memo[n] = rec_fib(n - 1) + rec_fib(n - 2)
+    return memo[n]
 
-for i in range(1, 20):
+for i in range(1, 100):
     print rec_fib(i), iter_fib(i)
 
