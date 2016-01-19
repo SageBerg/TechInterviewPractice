@@ -1,12 +1,4 @@
-class Node(object):
-
-    def __init__(self, data):
-        self.data = data
-        self.left = None
-        self.right = None
-
-    def __repr__(self):
-        return str(self.data)
+from tree import Node
 
 def lca(root, val_1, val_2):
     val_1_list = []
