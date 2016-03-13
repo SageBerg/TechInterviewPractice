@@ -22,9 +22,17 @@ def dec_to_hex(n):
         n /= 16
     return result
 
+def dec_to_binary(n):
+    pass
+
+def binary_to_dec(string):
+    pass
+
 def main():
     print hex_to_dec("bbaa")
     print dec_to_hex(48042)
+    print binary_to_dec("101010010001")
+    print dec_to_binary(9001)
 
 main()
        
